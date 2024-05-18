@@ -1,0 +1,42 @@
+print("Bismillah")
+print("==================================")
+print("  Mayer Doa Hotel & Restaurant")
+print("     Matikata, Gorto City")
+print("==================================")
+print()
+print("~*~*~*~*~*~*~*~*~*~*~*~*")
+print("        Menu")
+print("~*~*~*~*~*~*~*~*~*~*~*~*")
+print("1. Kacchi Biriani ... ... ... 180 tk.")
+print("2. Morog Polao ... ... ... .. 150 tk.")
+print("3. Plain Polao ... ... ... .. 120 tk.")
+print("3. Kala Bhuna ... ... ... ... 120 tk.")
+print()
+
+# price list
+# kacchi = 180
+# morog_polao = 150
+# plain_polao = 120
+# kala_bhuna = 120
+
+price_dict = {"1": 180, "2": 120, "3": 120, "4": 120}
+item_dict = {"1": "Kacchi biriani", "2": "Morog Polao", "3": "Plain Polao",
+             "4": "Kala bhuna"}
+bill = 0
+
+print("Please tell us the number of the food you want to eat:")
+while True:
+    user_choice = input()
+    print("You have selected ", item_dict[user_choice])
+
+    bill =  bill + price_dict[user_choice]
+    
+    exit_choice = input("Anything else? <Y/N>")
+    if exit_choice == "N" or exit_choice == "n":
+        print()
+        print("Thank you sir. You have a great choice.")
+        print("Your total bill is ", bill)
+        print("Your food is coming soon. You can do zikir and fikir during this time.")
+        print()
+        break
+    print("\nPlease enter the menu number: ")
